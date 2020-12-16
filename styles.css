@@ -1,0 +1,667 @@
+img {
+    width: 100%;
+  }
+
+h1, h2, h3 {
+    font-family: 'Bungee Shade', cursive;
+    color: white;
+    padding: 15px;
+    }
+    
+p {
+    font-family: sans-serif;
+    color: white;
+    padding: 15px;
+    }
+
+h1
+{
+text-align: center;
+}
+
+.hero
+{
+    width: 100%;
+    min-height: 600px; 
+    background-image: url("Oven1600w.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: red;
+    float: left;
+    clear: both;
+}
+
+
+/* The following is the navbar section.*/
+
+
+.navbar
+{
+    width: 90%;
+    height: 20px; 
+    margin: auto;
+    margin-top: 25px;
+    position: relative;
+}
+
+.navlogo
+{
+    float: left;
+    margin-top: 25px;
+    height: 20px;
+    width: 20%;
+    background-color: violet;
+}
+
+.navbarright
+{
+    float: right;
+}
+
+.navbar ul
+{
+    list-style-type: none;
+}
+
+.navbar li
+{
+    height: 20px;
+    display:inline;
+    float: right;
+}
+
+.hover {
+    width: 90px;
+    max-height: 10px;
+    position: relative;
+    margin-left: 15px;
+}
+
+.hover .img-link {
+    position: absolute;
+}
+
+.hover:hover .img-link {
+    display: none;
+}
+
+.hover .img-hover {
+    position: absolute;
+    display: none;
+}
+
+.hover:hover .img-hover {
+    display: inline;
+}
+
+
+/* The following was the code I had for the basket in the desktop version, but it seems more trouble that it's worth! If I use this code, then the basket seems to go outside of the navbar, to the right. 
+
+.basket {
+    background-color: green;
+    max-height: 10px;
+    float: right;
+    width: 30%;
+    }
+...*/
+
+
+/* The following is to make the desktop-orientated navbar section disappear when you zoom.*/
+
+
+@media only screen and (max-width: 600px) {
+    .navbar { 
+      display: none;
+    }
+  }
+
+/*  That worked fine.*/
+
+/*  The following CSS is for the logo and hamburger icon when on a mobile device.*/
+
+.mobilenav
+{
+    padding-top: 50px;
+    position: relative;
+    margin: auto;
+    width: 80%;
+    min-height: 100px;
+}
+
+
+.hamburgericon
+{
+    position: absolute;
+    float: left;
+    width: 5%;
+    min-height: 20px;
+}
+
+.mobilelogo
+{
+    position: relative;
+    margin: auto;
+    width: 60%;
+    min-height: 100px;
+    background-color: blue;
+}
+
+.mobilebasket
+{
+    position: absolute;
+    float: right;
+    width: 5%;
+    min-height: 20px;
+    background-color: green;
+}
+
+@media only screen and (max-width: 600px) {
+    .mobilenav { 
+      display: block;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .mobilenav { 
+      display: none;
+    }
+  }
+
+/*  And here I plan to use the same CSS to make the hamburger and menu icons change. The thing is that I need to give them a class of div - not "hover" as above, but something else.*/
+
+.hovermobile .img-link {
+    position: absolute;
+}
+
+.hovermobile:hover .img-link {
+    display: none;
+}
+
+.hovermobile .img-hover {
+    position: absolute;
+    display: none;
+}
+
+.hovermobile:hover .img-hover {
+    display: inline;
+}
+
+
+/*  And that completes the CSS for the navbar on mobile devices.*/
+
+.hero h1, h2, h3 
+{
+  text-align: center;
+}
+
+.herocontainer
+{
+    clear: both;
+    width: 60%;
+    min-height: 200px; 
+    margin: auto;
+    margin-top: 300px;
+    margin-bottom: 25px;
+}  
+
+
+.hero-selling-point
+{
+  background-color: blue;
+  margin: auto;
+  width: 60%;
+  min-height: 100px;
+}
+
+
+.hero-order
+{
+  background-color: green;
+  float: left;
+  width: 40%;
+  min-height: 100px;
+}
+
+
+.hero-special-offers
+{
+  background-color: yellow;
+  float: right;
+  width: 40%;
+  min-height: 100px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .hero-order 
+  { 
+  clear: both;
+  margin: auto;
+  width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .hero-special-offers 
+  { 
+  clear: both;
+  margin: auto;
+  width: 100%;
+  }
+}
+
+/*  the above was trialled in the footer and it works fine. */
+
+
+
+/*  CSS for the Menu section starts here.*/
+
+.menu
+{
+    width: 100%;
+    min-height: 300px;  
+    background-color: orange;
+    float: left;
+    clear: both;
+}
+
+.menucontainer
+{
+    width: 80%;
+    min-height: 200px; 
+    background-color: green;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: table;
+}  
+
+.menucolumn
+{
+width: 33.33%;
+min-height: 100px; 
+background-color: cyan;
+float: left;
+display: table-cell;
+}
+
+@media only screen and (max-width: 600px) {
+    .menucolumn { 
+      display: block;
+      width: 100%;
+    }
+  }
+
+  /*  The plan here is a conditional scenario so that the flowlines for the next section all jump down at the same point, regardless of how long or short the line of h2 is. Something like: decide, based on the point where one of them jumps down, a height that triggers all divs in the menuheading class to become bigger. Without upsetting the other conditional stuff for the mobile.*/
+
+@media only screen and (max-width: 1200px) {
+    .menuheading { 
+      background-color: green;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    .menuheading { 
+      background-color: red;
+    }
+  }
+
+
+.menucolumn h2, h1, p 
+{
+color: white;
+padding: 10px;
+}
+
+.menuheading
+{
+
+}
+
+.menuparagraph
+{
+
+}
+
+/*  CSS for the Reviews section starts here. For the moment, I'm trialling abetter version of the mobile nav here*/
+
+.reviews
+{
+    width: 100%;
+    min-height: 300px; 
+    background-color: black;
+    float: left;
+}
+
+.reviewscontainer
+{
+    width: 80%;
+    min-height: 200px; 
+    background-color: green;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}  
+
+.column 
+{
+    height: 300px;
+  }
+  
+  .left 
+  {
+    width: 5%;
+    float: left;
+  }
+  
+  .right 
+  {
+    float: right;
+    width: 5%;
+  }
+
+  .middle {
+    width: 40%;
+    float: left;
+    margin-left: 25%
+  }
+
+
+
+
+/*  CSS for the About Us section starts here.*/
+
+
+.aboutus
+{
+    width: 100%;
+    min-height: 300px; 
+    background-color: green;
+    float: left;
+}
+
+.staffcontainer
+{
+    width: 80%;
+    min-height: 200px; 
+    background-color: blue;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: table;
+}  
+
+.staffcolumnimage
+{
+width: 33.33%;
+background-color: red;
+float: left;
+display: table-cell;
+margin-bottom: 30px;
+clear: both;
+}
+
+@media only screen and (max-width: 600px) {
+    .staffcolumnimage { 
+      display: block;
+      width: 100%;
+    }
+  }
+
+
+
+.staffcolumntext
+{
+width: 64.66%;
+min-height: 100px; 
+background-color: orange;
+float: left;
+display: table-cell;
+padding-left: 2%;
+}
+
+@media only screen and (max-width: 600px) {
+    .staffcolumntext { 
+      display: block;
+      width: 100%;
+    }
+  }
+
+
+
+.staffcolumntext h2, h1, p {
+color: white;
+padding: 10px;
+}
+
+
+
+
+
+
+
+/*  CSS for the Ingredients section starts here - I'm thinking of dropping this section*/
+
+.ingredients
+{
+    width: 100%;
+    min-height: 300px; 
+    background-color: cyan;
+    float: left;
+}
+
+.ingredientscontainer
+{
+    width: 80%;
+    min-height: 200px; 
+    background-color: violet;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}  
+
+/*  CSS code for the slider goes here.*/
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 1s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+
+
+
+
+
+/*  CSS for the FAQ section starts here.*/
+
+.faq
+{
+    width: 100%;
+    min-height: 300px; 
+    background-color: blue;
+    float: left;
+}
+
+.faqcontainer
+{
+    width: 80%;
+    min-height: 200px; 
+    background-color: violet;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}  
+
+
+.accordion {
+    background-color: violet;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    display: inline;
+  }
+  
+  
+  .active, .accordion:hover {
+    background-color: green;
+  }
+  
+  
+  .accordion:after {
+    content: '\002B';
+    color: yellow;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background-color: red;
+  }
+  
+
+/*  CSS for the Work With Us section starts here.*/
+
+.workwithus
+{
+    width: 100%;
+    min-height: 300px; 
+    background-color: violet;
+    float: left;
+    clear: both;
+}
+
+.workwithuscontainer
+{
+    width: 80%;
+    min-height: 200px; 
+    background-color: green;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}  
+
+
+/*  CSS for the Work With Us section starts here.*/
+
+.footer
+{
+    width: 100%;
+    min-height: 200px; 
+    background-color: grey;
+    float: left;
+}
+
+.footer-container
+{
+    background-color: violet;
+    margin: auto;
+    width: 60%;
+    min-height: 400px;
+}
